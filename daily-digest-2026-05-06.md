@@ -125,33 +125,95 @@ https://mp.weixin.qq.com/s/FcTzvVjn3OVNpLDDZk-ctA
 | baoyu.io | 最后更新 2025-11，72 小时内无新内容 |
 | BigModel | 抓取失败，跳过 |
 
+## 🌐 Web Search 最新资讯（48h 内）
+
+### OpenAI
+
+**GPT-5.5 正式发布：原生全模态 + Agent 工作流**
+OpenAI 于 4 月 23 日发布 GPT-5.5，实现原生全模态（文本、图像、音频、视频统一理解与生成），支持 Agent 工作流（函数调用、并行工具执行、结构化输出）。定价：输入 $5/M tokens、输出 $30/M tokens。该模型在多模态基准上大幅领先前代，标志着从"文本优先 + 模态拼接"向"原生全模态"的架构跃迁。
+https://openai.com/index/introducing-gpt-5-5/
+
+**OpenAI Workspace Agents 上线**
+4 月 22 日 OpenAI 推出 Workspace Agents，支持后台执行、团队共享和 MCP 协议集成。Agent 可在用户离线时持续运行，完成后通知用户，并支持跨团队成员共享 Agent 配置和执行结果。MCP 集成使 Agent 能直接连接企业内部工具和数据源。
+https://openai.com/index/workspace-agents/
+
+### DeepSeek
+
+**DeepSeek V4 开源发布：1M 上下文 + 华为芯片**
+4 月 24 日 DeepSeek 发布 V4 系列，包含 V4-Pro（1.6T 总参数 / 49B 活跃参数）和 V4-Flash（284B 总参数 / 13B 活跃参数），均支持 1M 上下文窗口。V4-Pro 在 MMLU、HumanEval 等基准上接近 GPT-5.5 水平，V4-Flash 专注高速推理。关键突破：训练使用华为昇腾芯片，标志着国产 AI 芯片在大规模训练中的可行性验证。模型完全开源。
+https://api-docs.deepseek.com/news/news0501
+
+### arXiv 论文精选
+
+**XSKILL：多模态 Agent 的持续学习框架**
+arXiv:2603.12056 — 提出 XSKILL 框架，使多模态 Agent 能够从经验和技能中持续学习。核心创新在于将 Agent 能力分解为可组合的技能模块，新技能可通过少量样本习得并与已有技能协同，避免灾难性遗忘。在 VLM-Bench 和 AgentBench 上取得 SOTA。
+https://arxiv.org/abs/2603.12056
+
+**Routing-Based Continual Learning for MLLMs**
+arXiv:2511.01831v3 — 提出基于路由的持续学习架构，通过动态路由机制为不同任务域选择不同的模型参数子集，从根本上解决多模态大语言模型的灾难性遗忘问题。在 15 个连续学习基准上，遗忘率降低 73%，同时保持新任务学习效率。
+https://arxiv.org/abs/2511.01831
+
+### Anthropic
+
+**Claude Opus 4.6 / 4.7 系统卡片发布**
+Anthropic 发布 Claude Opus 4.6 和 4.7 的系统卡片，详细披露了模型在 Agent 安全、多模态能力和对齐方面的设计决策。Opus 4.7 在 Agent 自主执行任务时引入"确认-暂停"机制，在检测到高风险操作时自动暂停并请求人类确认。多模态方面，视觉理解能力在医学影像和工程图纸等专业领域显著提升。
+https://www.anthropic.com/news
+
+### Google
+
+**Gemini 3.2 GA 上线 API + Enterprise Agent Platform**
+Google 宣布 Gemini 3.2 在 API 上正式可用（GA），同时推出 Gemini Enterprise Agent Platform。该平台已部署 2000+ 企业 Agent，包含 5 大核心组件：Agent Builder、Tool Registry、Memory Service、Guardrail Engine 和 Analytics Dashboard。Gemini 3.2 在长上下文推理和多模态理解上较 3.1 有显著提升。
+https://blog.google/technology/ai/
+
+### Microsoft
+
+**Agent Framework 1.0 GA + Agent 365 发布**
+Microsoft Agent Framework 1.0 正式 GA，支持 .NET 和 Python，提供稳定 API 和长期支持承诺。同步发布 Agent 365，为企业提供统一的 Agent 控制平面，集成 Microsoft 365 全家桶（Teams、Outlook、SharePoint 等），支持 Agent 间协作和权限管理。
+https://devblogs.microsoft.com/
+
 ## 🔗 跨源深度整合分析
 
 ### 【纵向溯源】
 
-**AI Agent 安全与自主性的平衡**是当前技术发展的核心张力。从 Anthropic 发布 Claude Code Auto Mode（用模型分类器替代人工审批），到 Guillermo Rauch 推出 deepsec（用 Agent 编排器做安全审查），再到 Aaron Levie 指出企业部署 AI Agent 需要系统性的 IT 升级和变更管理——三者共同指向一个问题：AI Agent 的能力已超越人类审批速度，如何在保持自主性的同时确保安全？这一问题的根源在于，传统软件安全依赖人工审批和沙箱隔离，但 Agent 的自主性要求打破了这一范式。
+**AI Agent 安全与自主性的平衡**是当前技术发展的核心张力。从 Anthropic 发布 Claude Code Auto Mode（用模型分类器替代人工审批）和 Opus 4.7 的"确认-暂停"机制，到 Guillermo Rauch 推出 deepsec（用 Agent 编排器做安全审查），再到 OpenAI Workspace Agents 的后台自主执行、Aaron Levie 指出企业部署 AI Agent 需要系统性的 IT 升级和变更管理——四者共同指向一个问题：AI Agent 的能力已超越人类审批速度，如何在保持自主性的同时确保安全？这一问题的根源在于，传统软件安全依赖人工审批和沙箱隔离，但 Agent 的自主性要求打破了这一范式。Anthropic 的"确认-暂停"和 Auto Mode 代表了模型内省路线，deepsec 代表了外部编排路线，两种路线正在并行发展。
 
-**AI 架构的效率革命**正在加速。SubQ 的亚二次注意力机制将长上下文计算从 O(N²) 降至线性，SonicMoE 通过算法重构消除 MoE 中间激活缓存实现前向 54% 性能提升，Gemini Flash 以极低成本提供百万级上下文——这些进展共同表明，AI 行业正从"堆算力"转向"优化架构"的范式转换。xAI 拥有 55 万 GPU 但利用率仅 11% 的事实，更是这一转换必要性的有力注脚。
+**AI 架构的效率革命**正在加速。SubQ 的亚二次注意力机制将长上下文计算从 O(N²) 降至线性，SonicMoE 通过算法重构消除 MoE 中间激活缓存实现前向 54% 性能提升，Gemini Flash 以极低成本提供百万级上下文，DeepSeek V4-Flash 以 13B 活跃参数实现高速推理——这些进展共同表明，AI 行业正从"堆算力"转向"优化架构"的范式转换。DeepSeek V4 使用华为昇腾芯片训练成功，更是这一转换的硬件层面注脚：算力效率不仅来自算法优化，也来自芯片供应链多元化。
+
+**多模态的"原生统一"时代到来**。GPT-5.5 实现原生全模态（非拼接式），Luma Uni-1.1 用 decoder-only 自回归架构统一理解与生成，Gemini 3.2 在多模态理解上显著提升——三大实验室同时走向"原生多模态"架构，标志着"文本优先 + 模态适配器"的旧范式正在被替代。这对持续学习领域有深远影响：原生多模态模型需要同时处理跨模态的灾难性遗忘问题，XSKILL 和 Routing-Based CL 正是针对这一挑战的早期探索。
 
 **AI 自我进化的时间线**正在被严肃讨论。Anthropic 联合创始人 Jack Clark 给出 2028 年 AI 自主构建自身系统 60% 概率的判断，与 Sam Altman 对语音模型改变人机交互方式的期待形成呼应——当 AI 能自主优化自身架构（如 AlphaEvolve 自动发现 GPU 内核算法），人类在 AI 研发中的角色将从执行者转向监督者。
 
+**Agent 基础设施化**正在成为平台级竞争。OpenAI Workspace Agents、Google Gemini Enterprise Agent Platform、Microsoft Agent 365——三大巨头在同一周内推出企业级 Agent 平台，这不是巧合，而是 Agent 从"工具"向"基础设施"跃迁的信号。Agent Framework 1.0 GA 提供稳定 API 和长期支持，意味着企业可以像依赖操作系统一样依赖 Agent 框架。
+
 ### 【横向对比】
 
-| 维度 | Transformer 路线 | 亚二次架构（SubQ/SSA） | 神经形态计算 |
-|------|------------------|----------------------|-------------|
-| 核心思想 | 全局注意力，O(N²) 复杂度 | 内容驱动稀疏路由，线性复杂度 | 模拟生物神经网络，脉冲信号 |
-| 适用范围 | 通用，生态成熟 | 长上下文、代码理解等特定场景 | 超低功耗推理（概念验证阶段） |
-| 实际效果 | 性能天花板高但成本高 | 百万 token 场景 52 倍加速 | 理论上比生物大脑快 25-100 万倍 |
-| 产业定位 | 当前主流，基础设施级 | 前沿探索，特定场景替代方案 | 远期方向，尚处实验室阶段 |
+| 维度 | Transformer 路线 | 亚二次架构（SubQ/SSA） | MoE 路线（DeepSeek V4） |
+|------|------------------|----------------------|------------------------|
+| 核心思想 | 全局注意力，O(N²) 复杂度 | 内容驱动稀疏路由，线性复杂度 | 稀疏激活，总参数大但活跃参数小 |
+| 适用范围 | 通用，生态成熟 | 长上下文、代码理解等特定场景 | 通用，兼顾性能与推理成本 |
+| 实际效果 | 性能天花板高但成本高 | 百万 token 场景 52 倍加速 | V4-Pro 接近 GPT-5.5，V4-Flash 极速推理 |
+| 产业定位 | 当前主流，基础设施级 | 前沿探索，特定场景替代方案 | 主流演进方向，开源生态核心 |
 
-在 Agent 安全领域，三种路线并存：Anthropic 的模型分类器审批（Auto Mode）、Vercel 的 Agent 编排安全审查（deepsec）、传统沙箱隔离。模型分类器路线维护成本最低但依赖模型判断力，Agent 编排路线兼顾深度和自动化但复杂度高，沙箱隔离最安全但灵活性最差。
+**持续学习路线对比：**
+
+| 维度 | XSKILL（技能组合） | Routing-Based CL（动态路由） | 传统 EWC/LoRA 微调 |
+|------|-------------------|---------------------------|-------------------|
+| 核心思想 | 能力分解为可组合技能模块 | 按任务域路由到不同参数子集 | 正则化或低秩适配防止遗忘 |
+| 遗忘处理 | 技能隔离，天然避免遗忘 | 路由隔离，遗忘率降低 73% | 正则化约束，效果有限 |
+| 新任务学习 | 少量样本即可习得新技能 | 需要路由训练 | 需要全量或部分微调 |
+| 适用场景 | 多模态 Agent 持续进化 | MLLM 多任务持续学习 | 单模型增量更新 |
+
+在 Agent 安全领域，三种路线并存：Anthropic 的模型分类器审批 + 确认暂停（Auto Mode / Opus 4.7）、Vercel 的 Agent 编排安全审查（deepsec）、传统沙箱隔离。模型分类器路线维护成本最低但依赖模型判断力，Agent 编排路线兼顾深度和自动化但复杂度高，沙箱隔离最安全但灵活性最差。
+
+在 Agent 平台领域，三大巨头路线对比：OpenAI Workspace Agents 侧重 MCP 协议集成和团队协作，Google Gemini Enterprise Agent Platform 侧重企业级组件（Guardrail Engine、Analytics Dashboard），Microsoft Agent 365 侧重与 Office 全家桶深度集成。三者共同推动了 Agent 从"单点工具"向"企业基础设施"的跃迁。
 
 ### 【趋势判断】
 
 **多源共同印证的趋势：**
-1. **Agent 从编码走向知识工作**——Peter Yang 的"三个前沿"框架、Aaron Levie 的企业 Agent 部署观察、Anthropic 的 Auto Mode 发布，三者从不同角度指向同一方向：AI Agent 正在突破编码领域，进入更广泛的知识工作场景。
-2. **AI 架构效率优先于规模扩张**——Nikunj Kothari 对 Gemini Flash 的高度评价、SubQ 的线性注意力、SonicMoE 的 MoE 优化、xAI 低利用率的警示，共同表明行业共识已从"买 GPU"转向"用好 GPU"。
-3. **语音交互成为新入口**——Sam Altman 明确表达对语音模型的期待，Luma Uni-1.1 的多模态统一、讯飞星火的音视频交互，都指向语音将成为 AI 交互的下一个主界面。
+1. **Agent 从编码走向知识工作，并正在基础设施化**——Peter Yang 的"三个前沿"框架、Aaron Levie 的企业 Agent 部署观察、Anthropic 的 Auto Mode 和 Opus 4.7 确认暂停机制，三者从不同角度指向同一方向：AI Agent 正在突破编码领域，进入更广泛的知识工作场景。而 OpenAI Workspace Agents、Google Gemini Enterprise Agent Platform、Microsoft Agent 365 的同期发布，则标志着 Agent 已从"工具"升级为"企业基础设施"。
+2. **AI 架构效率优先于规模扩张**——Nikunj Kothari 对 Gemini Flash 的高度评价、SubQ 的线性注意力、SonicMoE 的 MoE 优化、DeepSeek V4 的稀疏激活架构，共同表明行业共识已从"买 GPU"转向"用好 GPU"。DeepSeek V4 用华为芯片训练成功，进一步证明算力效率的突破不仅来自算法，也来自供应链多元化。
+3. **原生多模态成为新标准**——GPT-5.5 原生全模态、Luma Uni-1.1 统一理解与生成、Gemini 3.2 多模态提升，三大实验室同时转向原生多模态架构。"文本优先 + 模态适配器"的旧范式正在被替代。
+4. **持续学习从学术走向工程**——XSKILL 和 Routing-Based CL 两篇论文分别从技能组合和动态路由角度解决多模态 Agent 的灾难性遗忘问题，且均在标准基准上取得显著成果，表明持续学习正在从理论探索进入工程可用阶段。
 
 **存在明显分歧的领域：**
 1. **AI 自我进化的时间表**——Jack Clark 给出 2028 年 60% 概率，但黄仁勋公开批评 Dario Amodei 的"上帝视角"论调，业界对 AGI 到来时间仍存在根本分歧。
@@ -195,6 +257,16 @@ https://mp.weixin.qq.com/s/FcTzvVjn3OVNpLDDZk-ctA
 - 机器之心: Luma Uni-1.1 — https://mp.weixin.qq.com/s/hNYY0PHsW92HhDUxKfRTWw
 - 机器之心: SubQ 亚二次架构 — https://mp.weixin.qq.com/s/aUXWJY1TFrz6stMpmQRHww
 - 机器之心: Anthropic 2028 自我进化 — https://mp.weixin.qq.com/s/FcTzvVjn3OVNpLDDZk-ctA
+
+### Web Search
+- OpenAI: GPT-5.5 发布 — https://openai.com/index/introducing-gpt-5-5/
+- OpenAI: Workspace Agents — https://openai.com/index/workspace-agents/
+- DeepSeek: V4 开源发布 — https://api-docs.deepseek.com/news/news0501
+- arXiv: XSKILL 持续学习框架 — https://arxiv.org/abs/2603.12056
+- arXiv: Routing-Based CL for MLLMs — https://arxiv.org/abs/2511.01831
+- Anthropic: Opus 4.6/4.7 系统卡片 — https://www.anthropic.com/news
+- Google: Gemini 3.2 GA + Agent Platform — https://blog.google/technology/ai/
+- Microsoft: Agent Framework 1.0 GA + Agent 365 — https://devblogs.microsoft.com/
 
 ---
 Generated through the Follow Builders skill: `https://github.com/zarazhangrui/follow-builders`
