@@ -136,6 +136,52 @@ Dmitri Dolgov 是 Waymo 联合创始人，从 DARPA 挑战赛开始已在自动�
 2. **派早报：一加、realme 合并，M4 Mac mini 256GB 版本下架，豆包确认将推出付费版本**
    - https://sspai.com/post/109410
 
+### aihot.virxact.com（AI 热点精选）
+
+> 来源：aihot.virxact.com（卡兹克推荐的高价值 AI 资讯聚合平台）
+
+1. **Anthropic 研究所公布四大核心研究方向** — 经济扩散、威胁与韧性、真实世界 AI 系统、AI 驱动研发；首次系统公开研究议程
+   - https://www.anthropic.com/research/anthropic-institute-agenda
+
+2. **OpenAI 开源 20B MoE 模型本地 MacBook 流畅运行** — TurboQuant 3-bit 量化 + MLX 优化，131K 超长上下文，无需联网不付费
+   - https://huggingface.co/manjunathshiva/gpt-oss-20b-tq3
+
+3. **全国首例 AI 短剧侵权刑事案宣判** — 盗录超 1700 部牟利获刑，法院认定提示词创作具有独创性
+   - https://www.ithome.com/0/947/300.htm
+
+4. **阿里千问 PC 端上线 AI 语音输入功能** — 跨应用任务调度中枢，按住快捷键直接派发指令
+   - https://www.ithome.com/0/947/207.htm
+
+5. **OpenAI 政变之夜内部短信曝光** — Mira Murati 证词显示董事会动机："就是不想让 AGI 掌控在你手上"
+   - https://x.com/dotey/status/2052255174706479349
+
+6. **OpenSearch-VL：前沿多模态搜索 Agent 开源方案** — 七个基准平均涨 10 点，数据、环境、算法全部开源
+   - https://arxiv.org/abs/2605.05185
+
+7. **Amp 发布 CLI 工具 Neo，Coding Agent 转向长链路** — 默认允许所有操作，安全控制权移交插件系统
+   - https://x.com/shao__meng/status/2052212574306095337
+
+8. **Open Slide：用 React 框架让 AI 写 PPT** — 集成 1500+ 品牌 Logo 库，专为 AI Agent 设计
+   - https://x.com/vista8/status/2052203194982248537
+
+9. **Flue：又一个 Claude Code 风格 Agent 开发框架** — TypeScript，一行 fetch 即可启动
+   - https://flueframework.com/start.md
+
+10. **TRAE SOLO 移动端全攻略** — 字节 AI Agent 工具三端同步，支持 Skill 扩展和飞书集成
+    - https://x.com/vista8/status/2052187256920691131
+
+11. **Apple 发布 SpecMD：MoE 推理缓存策略标准化框架** — 系统评估不同缓存策略的交互影响与硬件适配性
+    - https://machinelearning.apple.com/research/specmd-expert-prefetching
+
+12. **Apple 发布 iTARFlow：迭代去噪归一化流生成模型** — 端到端似然训练 + 自回归采样，扩散模型之外的可行替代
+    - https://machinelearning.apple.com/research/normalizing-flows-iterative-denoising
+
+13. **Google 翻译推出实时耳机传译** — 基于 Gemini 语音模型，支持 70+ 语言，保留语气和节奏
+    - https://x.com/berryxia/status/2052172994437681315
+
+14. **xAI Grok Imagine API 推出 Quality Mode** — 图像生成与编辑功能，细节精细、纹理准确、多语言文本生成
+    - https://x.ai/news/grok-imagine-quality-mode
+
 ---
 
 ## 🌐 Web Search 最新资讯（48h 内）
