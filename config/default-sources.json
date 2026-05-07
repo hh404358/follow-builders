@@ -45,6 +45,13 @@
       "indexUrl": "https://claude.com/blog",
       "articleBaseUrl": "https://claude.com/blog/",
       "fetchMethod": "http"
+    },
+    {
+      "name": "AIHoot",
+      "type": "aihot",
+      "indexUrl": "https://aihot.virxact.com",
+      "articleBaseUrl": "",
+      "fetchMethod": "http"
     }
   ],
   "x_accounts": [

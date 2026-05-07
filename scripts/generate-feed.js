@@ -856,6 +856,79 @@ function extractClaudeBlogArticleContent(html) {
   return { title, author, publishedAt, content };
 }
 
+// Parses the aihot.com index page to extract article links and metadata.
+function parseAihotIndex(html) {
+  const articles = [];
+  const seenUrls = new Set();
+
+  const linkRegex = /href="\/post\/([a-z0-9-]+)"/gi;
+  let linkMatch;
+  while ((linkMatch = linkRegex.exec(html)) !== null) {
+    const slug = linkMatch[1];
+    if (seenUrls.has(slug)) continue;
+    seenUrls.add(slug);
+    articles.push({
+      title: "",
+      url: `https://aihot.virxact.com/post/${slug}`,
+      publishedAt: null,
+      description: "",
+    });
+  }
+  return articles;
+}
+
+// Extracts the main text content from an aihot.com article page.
+function extractAihotArticleContent(html) {
+  let title = "";
+  let author = "";
+  let publishedAt = null;
+  let content = "";
+
+  const jsonLdRegex =
+    /<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi;
+  let jsonLdMatch;
+  while ((jsonLdMatch = jsonLdRegex.exec(html)) !== null) {
+    try {
+      const ld = JSON.parse(jsonLdMatch[1]);
+      if (ld["@type"] === "BlogPosting" || ld["@type"] === "Article") {
+        title = ld.headline || ld.name || "";
+        author = ld.author?.name || "";
+        publishedAt = ld.datePublished || null;
+        break;
+      }
+    } catch {
+      // Not valid JSON-LD, skip
+    }
+  }
+
+  if (!title) {
+    const h1Match = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
+    if (h1Match) title = h1Match[1].replace(/<[^>]+>/g, "").trim();
+  }
+
+  const articleMatch = html.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
+  const mainMatch = html.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
+  const contentHtml = articleMatch ? articleMatch[1] : (mainMatch ? mainMatch[1] : html);
+
+  content = contentHtml
+    .replace(/<script[\s\S]*?<\/script>/gi, "")
+    .replace(/<style[\s\S]*?<\/style>/gi, "")
+    .replace(/<nav[\s\S]*?<\/nav>/gi, "")
+    .replace(/<footer[\s\S]*?<\/footer>/gi, "")
+    .replace(/<header[\s\S]*?<\/header>/gi, "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return { title, author, publishedAt, content };
+}
+
 // Main blog fetching orchestrator.
 // For each blog source in the config, discovers new articles, deduplicates
 // against previously seen URLs, fetches full article content, and returns
@@ -886,6 +959,8 @@ async function fetchBlogContent(blogs, state, errors) {
         candidates = parseAnthropicEngineeringIndex(indexHtml);
       } else if (blog.indexUrl.includes("claude.com")) {
         candidates = parseClaudeBlogIndex(indexHtml);
+      } else if (blog.indexUrl.includes("aihot.com")) {
+        candidates = parseAihotIndex(indexHtml);
       }
 
       // Step 2: Filter to unseen articles, cap at MAX_ARTICLES_PER_BLOG.
@@ -935,6 +1010,8 @@ async function fetchBlogContent(blogs, state, errors) {
             extracted = extractAnthropicArticleContent(articleHtml);
           } else if (article.url.includes("claude.com/blog")) {
             extracted = extractClaudeBlogArticleContent(articleHtml);
+          } else if (article.url.includes("aihot.com")) {
+            extracted = extractAihotArticleContent(articleHtml);
           }
 
           if (!extracted || !extracted.content) {
