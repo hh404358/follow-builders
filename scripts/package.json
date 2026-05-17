@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "generate-feed": "node generate-feed.js",
-    "prepare-digest": "node prepare-digest.js"
+    "prepare-digest": "node prepare-digest.js",
+    "ima-compile": "node ima-incremental-compile.js"
   },
   "dependencies": {
     "dotenv": "^16.4.0",
+    "node-fetch": "^3.3.2",
     "proper-lockfile": "^4.1.0"
   }
 }
