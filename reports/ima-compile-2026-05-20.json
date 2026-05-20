@@ -1,0 +1,21 @@
+{
+  "rawTotal": 48,
+  "rawNotes": 5,
+  "rawArticles": 27,
+  "rawOther": 9,
+  "topicsAnalyzed": 8,
+  "newTopics": 0,
+  "updatedTopics": 8,
+  "added": [],
+  "updated": [
+    "Claude Code与Harness Engineering",
+    "AI Agent架构",
+    "DeepSeek技术",
+    "Prompt Engineering与AI工作流",
+    "Embedding模型选型",
+    "AI科研自动化",
+    "个人效能与方法论",
+    "知识库构建"
+  ],
+  "failed": []
+}
