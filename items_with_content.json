@@ -1,0 +1,284 @@
+[
+  {
+    "title": "让科研AI学会自进化？清华团队连发两篇skill来教你",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_d7c32f48bf07c3cfb75a978d4bd92b82",
+    "content": "URL: https://mp.weixin.qq.com/s/dlHRg8iI5OnM_nejmeNhog"
+  },
+  {
+    "title": "小龙虾彻底凉了？清华团队连夜开源Agent神器，Token成本狂降70%！",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_2b9b7d58b590c80dacd087458fcacfaf",
+    "content": "URL: https://mp.weixin.qq.com/s/TdfsW6iCBmy3esAQ78LkyQ"
+  },
+  {
+    "title": "optimize_anything: A Universal API for Optimizing any Text Parameter-arXiv.org",
+    "media_type": 2,
+    "media_id": "weburl_f3403f8db4ff18f44b554bd305f71b76_ae458845a5cd6fe1504a3f42edbc43ff",
+    "content": "Unsupported media type: 2"
+  },
+  {
+    "title": "8小时狂揽15K美金！Claude Code屠榜黑客马拉松，开源神器爆15万星",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_9b326ceee39391bc8af67229efd7a9d1",
+    "content": "URL: https://mp.weixin.qq.com/s/MiYxS4_Ael_e2Xb0sbz2CQ"
+  },
+  {
+    "title": "油管大神Dan Koe：如何以快到像作弊的速度实现你的大目标",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_88c3935e6ce60f86ece5c1b9190ef0c2",
+    "content": "URL: https://mp.weixin.qq.com/s/TI2CTWSEnXIn56cR89H2Sw"
+  },
+  {
+    "title": "分享一个Agent开源项目，把KV Cache玩出了花，任务成本可降到Hermes的1/6",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_5e078acfa1f2002e3791e3e96b21270a",
+    "content": "URL: https://mp.weixin.qq.com/s/p2lisP59UwYKV674e8JrKw"
+  },
+  {
+    "title": "全球排名前三，复旦自进化Harness Engineering让GPT‑5.4再涨7个点",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_3579ad9a1ed07e8e38e50839e8365204",
+    "content": "URL: https://mp.weixin.qq.com/s/ObREWAzbx9znsfuz1r4ZuQ"
+  },
+  {
+    "title": "Multi-Agent 不是银弹：Agent 架构选型的工程...",
+    "media_type": 11,
+    "media_id": "note_f3403f8db4ff18f44b554bd305f71b76_7460508999377968",
+    "content": "Multi-Agent 不是银弹：Agent 架构选型的工程判断背景大模型开始具备推理、工具调用和长程任务能力后，Agent 成为落地复杂任务的重要形态。编排 多 Agent 常常会让人感到 fancy 和“精妙”，但事实上 多 Agent 往往会给系统引入不必要的复杂度。这不是在否定 多 Agent ，而是在提醒我们：多 Agent 不是默认升级路线。Anthropic 的两篇工程博客给出的建议是先从 Single Agent 做起，只有在上下文隔离、并行探索、专业化或验证确实带来收益时才拆成多个 Agent。两篇 arXiv 论文进一步给出实验证据：在固定 reasoning token 预算下，单 Agent 在多跳推理任务上经常可以匹配甚至超过 多 Agent；真正决定效果的是任务结构、计算预算、协调拓扑和可验证性，而不是 Agent 数量。为什么 单 Agent 经常更强单 Agent 的优势来自链路短、上下文完整、状态一致、调试简单。很多任务虽然步骤多，但并不等于需要多个 Agent；一个 Agent 循环调用工具、持续维护同一份任务状态，反而更容易保持推理连续性。多 Agent 一旦拆分不当，就会产生摘要损失、目标理解偏差、重复工作和完成状态不清的问题。一言以蔽之，只要任务没有明确的上下文隔离、并行搜索、专业分工或独立验证需求，单 Agent 往往是更优 baseline。多 Agent 什么时候值得用Anthropic 的工程建议比较明确：多数企业工作流，一个设计良好的单 Agent 加合适工具已经足够。多 Agent 会引入额外成本，包括上下文复制、Agent 间协调、结果摘要、提示词维护和更多失败点。比较稳定的多 Agent 适用场景有三类：上下文保护某个子任务会产生大量上下文，但主任务只需要少量摘要。例如订单查询产生几千 token，技术诊断 Agent 只需要订单状态、购买时间、关键属性。子 Agent 负责读取和过滤，主 Agent 保持干净上下文。并行探索任务可以拆成多个互相独立的方向。典型场景是研究、搜索、竞品分析、代码库大范围排查。价值主要是覆盖更大搜索空间，不一定是更快，因为总体计算通常更多。专业化单 Agent 工具太多，尤其超过二十个且跨多个领域时，工具选择错误会增加。可以按领域拆成 CRM Agent、Marketing Agent、File Agent、Code Agent 等。每个 Agent 持有更小工具集和更聚焦的系统提示词。额外还有一个非常实用的模式：验证子 Agent。主 Agent 产出结果后，验证 Agent 只拿产物、标准和测试工具进行黑盒检查。这个模式有效的原因是验证不需要完整上下文，反而适合隔离出来。Anthropic 把常见多 Agent 协作总结为五类：多 Agent 的风险：协调成本会吃掉收益多 Agent 常见问题包括上下文丢失、协调消息过多、工具调用重复、状态不一致、失败路径难追踪。论文 Single-Agent LLMs Outperform Multi-Agent Systems on Multi-Hop Reasoning Under Equal Thinking Token Budgets 关注一个关键问题：很多多 Agent 论文比较时，是否给了多 Agent 更多 test-time compute？它的结论是：在固定 reasoning token 预算下，单 Agent 在多跳推理任务上经常可以匹配或超过多 Agent。论文还指出，一些多 Agent 看似提升，可能来自额外计算、上下文利用差异或评测控制不严格，而不是多 Agent 架构天然更强。多 agent 架构很多时候不是在叠加智能，而是在叠加噪声。论文提出通过一种名为“Pre-answer Scaffolding”（预回答支架）的强化技术，单智能体完全可以内化多智能体的辩论效果。可以直接复制这个四步 Prompt 模板，将“外部辩论”转化为“内部独白”：在给出最终答案之前，请你先执行以下步骤：列出问题中所有的歧义点和不明确之处；针对核心诉求，给出至少 3 种候选解释或解法路径；逐一对比这些候选，说明各自在当前上下文下的优劣；基于上述推理过程，给出最终答案。论文 Towards a Science of Scaling Agent Systems 做了受控评估，覆盖多种 Agent 架构、多个模型家族和多个 Agentic Benchmark。核心结论是：性能变化来自模型能力、任务结构和协调方式的交互，而不是“Agent 越多越好”。重要结论：当单 Agent 基线已经较强时，多 Agent 协调的边际收益会下降，甚至变成负收益。工具调用密集的任务中，多 Agent 可能因为上下文拆分和协调开销损失效率。缺乏集中验证的架构更容易传播错误；集中式协调能在一定程度上阻断错误扩散。在可分解的金融推理任务中，多 Agent 可能明显提升；在强顺序依赖的规划任务中，多 Agent 可能明显退化。5.工程落地建议一个可落地的判断框架在项目中考虑是否引入多 Agent，可以按下面顺序判断：先做强单 Agent工具设计是否清晰？上下文是否可压缩？是否有检索、总结、验证、重试机制？单 Agent 是否已经达到可接受质量？确认真实瓶颈是上下文被污染？是搜索空间太大？是工具太多导致误选？是需要独立验证？是任务天然需要多个长期工作流？选择最小多 Agent 形态只需要质量控制：Generator-Verifier。只需要一次性拆解：Orchestrator-Subagent。需要长期并行推进：Agent Teams。需要事件驱动扩展：Message Bus。需要共同沉淀知识：Shared State。评估不要只看效果Accuracy / Success RateToken 成本延迟工具调用次数失败可定位性复现稳定性人工接管成本一个决策树：工具数 > 10 → 留 single推理深度不够 → single +  pre-answer scaffoldingcontext 太脏太乱 →  Anthropic 推荐的 Orchestrator-Subagent任务能拆成完全独立子任务 → Anthropic 的 Agent Teams 模式强合规场景（金融 / 医疗） → centralized multi + 主动 cross-check6. 结论：架构选择要回到任务结构如果任务是可并行搜索、可独立验证、可按领域隔离工具，适合多 Agent；如果任务高度顺序依赖、需要完整上下文、子任务频繁互相同步，则更适合单 Agent 加上下文工程。实践中，建议先建立单 Agent baseline，再用最小多 Agent 模式做 A/B，并同时衡量效果、成本和可运维性。7.参考资料小红书原文：为什么 single agent 经常好过 multi-agent - JiachenYu：https://www.xiaohongshu.com/discovery/item/69f830fc000000001e00e973Anthropic, Building multi-agent systems: When and how to use them：https://claude.com/blog/building-multi-agent-systems-when-and-how-to-use-themAnthropic, Multi-agent coordination patterns: Five approaches and when to use them：https://claude.com/blog/multi-agent-coordination-patternsTowards a Science of Scaling Agent Systems：https://arxiv.org/abs/2512.08296Single-Agent LLMs Outperform Multi-Agent Systems on Multi-Hop Reasoning Under Equal Thinking Token Budgets：https://arxiv.org/abs/2604.02460从文本通信到隐空间递归：RecursiveMAS 解读一、背景上一篇我们讨论了为什么 Single Agent 经常好过 Multi-Agent：多 Agent 会引入通信、协调和状态同步成本。RecursiveMAS 正好从另一个角度回应这个问题：如果多 Agent 的文本通信是主要瓶颈，能不能让 Agent 在隐空间里协作，而不是每一轮都生成和解析自然语言？这篇论文提出 RecursiveLink 模块，把不同 Agent 的 hidden states 串成递归循环，并用 inner-outer loop 训练做系统级协同优化。实验上，它在数学、科学、医学、搜索和代码等 9 个 benchmark 上报告了平均 +8.3% 准确率提升，同时相对文本式 MAS 有 1.2x-2.4x 端到端加速和 34.6%-75.6% token 减少。二：RecursiveMAS 的核心机制RecursiveMAS 把整个多 Agent 系统建模为一个统一的隐空间递归计算图。每个 Agent 像递归语言模型中的一层，负责接收、变换和传递 latent thoughts。1. RecursiveLink：轻量连接模块RecursiveLink 是一个小型两层残差模块，承担两类连接：Inner Link：在单个 Agent 内部，把上一时刻的 hidden state 映射回输入 embedding 空间，让 Agent 可以继续在连续隐空间中生成 latent thoughts。Outer Link：在不同 Agent 之间传递 latent states，即使 Agent 的 hidden size 不同，也可以通过投影对齐。残差结构的意义是保留原始语义，只让模块学习分布偏移，这能降低训练难度，也有利于递归过程稳定。2. 把 Agent 串成递归循环RecursiveMAS 不是让 Agent 互相发长文本，而是形成一个 latent loop：Agent 内部先通过 inner link 生成 latent thoughts。再通过 outer link 把 latent states 传给下一个 Agent。最后一个 Agent 的 latent output 会反馈给第一个 Agent，开启下一轮递归。中间轮次都在隐空间协作，只有最终轮次解码为文本答案。这相当于把“多轮多 Agent 对话”改造成“多层递归计算”。因此它既保留了多 Agent 的角色分工，又减少了文本通信成本。3. Inner-Outer Loop Training：系统级协同优化训练分为两层：Inner Loop先为每个 Agent 的 inner link 做 warm start。目标是让生成的 latent thoughts 接近该 Agent 对正确答案的 embedding 分布。Outer Loop展开完整多 Agent 递归系统。只在最终文本预测上计算统一损失。梯度沿整个递归轨迹回传，让各个 RecursiveLink 共享全局 credit signal。一个关键点是：base LLM 参数保持冻结，主要训练 inner/outer links。官网给出的配置中，训练参数约 13M，占系统参数的 0.31% 左右。三：它支持哪些协作模式论文和仓库展示了四类代表性协作模式，官网首页也总结为多种 supported collaboration styles：从工程角度看，这说明 RecursiveMAS 并不是只针对一种固定拓扑，而是想成为一种连接层：只要 Agent 之间存在可递归传递的信息流，就可以把文本通信替换成 latent transfer。四：实验结果怎么理解论文在数学、科学、医学、搜索和代码生成等 9 个 benchmark 上做评估。官网和 arXiv 摘要中给出的关键结果：平均准确率相对最强基线提升 +8.3%。相比文本式 Recursive-TextMAS，端到端速度提升 1.2x-2.4x。token 使用减少 34.6%-75.6%。在 recursion depth 增加时，RecursiveMAS 继续提升，而 Recursive-TextMAS 更容易 plateau 或退化。RecursiveMAS 的提升不只是“多 Agent 又多跑了几轮”，而是试图改变 Agent 间通信介质。因为中间轮次不反复解码文本，所以递归越深，节省 token 和时间的优势越明显。但也要注意两个边界：这些结果来自论文设定下的已训练 RecursiveLink，不等于任意现有 Agent 系统都能直接无成本替换。它需要对模型 hidden states、embedding 空间和 checkpoint 有较深访问权限，更适合可控开源模型体系；对只提供 API 的闭源模型，落地方式会受限。五、工程落地建议RecursiveMAS 目前更适合作为 Agent 系统设计方向和研究型原型参考，不建议在业务系统里直接把现有文本式 Multi-Agent 全部替换成 latent-space MAS。比较稳妥的落地路径是：先找到文本通信成本最高的 Agent 链路，再逐步把“长文本中间态”压缩成结构化状态、短摘要或可训练连接层。1.先判断是否值得引入这类方案适合尝试 RecursiveMAS 思路的场景：多个 Agent 需要反复交互，而不是一次性分工。中间推理文本很长，但最终只需要短答案或结构化结果。token 成本、延迟或上下文膨胀已经成为明显瓶颈。任务有明确 benchmark 或自动验收标准，可以量化比较准确率和成本。使用开源模型，能访问 hidden states、embedding 或中间层输出。不太适合的场景：只调用闭源 API，拿不到模型 hidden states。Agent 之间需要给用户展示完整推理过程，不能隐藏中间状态。任务主要是简单工具编排，文本通信成本不是瓶颈。系统还没有稳定的 Single Agent baseline，失败原因尚不清楚。2.最推荐的短期落地方向对大多数业务项目，短期不必直接复现 RecursiveMAS。更务实的路线是：先把现有 Multi-Agent 的长文本通信改成结构化状态传递。再给 orchestrator 增加通信预算和轮次预算。对最贵的链路做 Single Agent vs 文本式 Multi-Agent A/B。如果确实存在高频、长链路、多轮协作瓶颈，再考虑开源模型 + adapter / connector 的实验。六、总结RecursiveMAS 的工程价值不只是“用 hidden states 通信”，而是提醒我们重新设计 Agent 间的信息流，尽量让中间协作保持短、准、可验证。七、参考资料RecursiveMAS 官网：https://recursivemas.github.io/GitHub 仓库：GitHub - RecursiveMAS/RecursiveMAS: Offical Implementation for \"Recursive Multi-Agent Systems\"arXiv 论文：https://arxiv.org/abs/2604.25917Hugging Face Paper 页面：https://huggingface.co/papers/2604.25917"
+  },
+  {
+    "title": "Perplexity 公开了他们的 Skills 设计之魂",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_270428f776f9e63aaf2dea38a501beea",
+    "content": "URL: https://mp.weixin.qq.com/s/35Rqv3enEUkpl189FfxjbA"
+  },
+  {
+    "title": "这样问DeepSeek，能「偷」到数据？",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_eb108f2693ed53f4d8d59cc6ff69dcfd",
+    "content": "URL: https://mp.weixin.qq.com/s/EUm8jYI2K2vxiIiVuCMhBA"
+  },
+  {
+    "title": "AI-Digest-2026-05-06.md",
+    "media_type": 7,
+    "media_id": "markdown_3c7cd68963ac9189be577fcd034fc501_7ef8e71fc385c339d272a4ec2440204b001a718e4e00167e",
+    "content": "Unsupported media type: 7"
+  },
+  {
+    "title": "从CVPR26等顶会来看，注意力机制的趋势已经很明显了",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_50c24f6ae535410cb7e1995f2e5e59e1",
+    "content": "URL: https://mp.weixin.qq.com/s/43AZjb7xf6kZpYuBYbw-Hg"
+  },
+  {
+    "title": "GitHub上狂揽 1.1 万 Star，22 岁开发者逆向工程了 Claude Mythos。",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_ee834c6423a1d56dfe4ada05d853a69d",
+    "content": "URL: https://mp.weixin.qq.com/s/XHxcCgL-PcNJmCOE_Axm0A"
+  },
+  {
+    "title": "AI Builders 每日摘要 — 2026-05-06",
+    "media_type": 11,
+    "media_id": "note_3c7cd68963ac9189be577fcd034fc501_7457701554579041",
+    "content": "AI Builders 每日摘要 — 2026-05-06🔷 X / Twitter 动态Aaron Levie(Box CEO)Anthropic 和 OpenAI 均推出帮助企业部署 AI Agent 的新举措。Agent 进入知识工作领域时，需要升级 IT 系统、为 Agent 提供上下文、现代化工作流、理清人机协作关系、推动采纳和变革管理。AI 模型虽具备强大能力，但将其稳定应用于业务流程没有捷径，这为市场创造了大量新岗位和公司机会。https://x.com/levie/status/2051344780328858040Guillermo Rauch(Vercel CEO)Vercel 开源了 Agent 编排器，用于深度安全审查。该工具针对内部使用开发，在多个主要开源项目上运行后，团队确信应将其分享给社区。编码 Agent 现在能在数分钟内发现关键漏洞，而人工团队可能需要数月。由于针对 Vercel Sandbox 优化，可并行调度数千 Agent 审查代码库。https://x.com/rauchg/status/2051386798899888539Peter Yang(Roblox 产品负责人)编码是第一前沿，知识工作是第二，个人 Agent 是第三。这是 AI 应用落地的三阶段路径判断。https://x.com/petergyang/status/2051508988936937764Amjad Masad(Replit CEO)Replit 帮助创业者找到投资者并安排会议，展示了 AI Agent 在融资场景的实际应用。https://x.com/amasad/status/2051511694040744139AI 在教育领域的优秀应用：为聋哑学生打造的多模态学习平台。https://x.com/amasad/status/2051406536443035922Swyx(AI 工程师社区领袖)OpenAI 估值 850 亿美元，ARR 约 300 亿；Anthropic 估值约 900 亿美元，ARR 约 440 亿（按不同收入确认方法，差距约 80-100 亿）。两大 AI 实验室的商业化差距正在缩小。https://x.com/swyx/status/2051440392722391180🔶 官方博客精选Anthropic EngineeringClaude Code Auto ModeAnthropic 推出 Claude Code 的自动模式，允许 AI 编程助手在更少人工干预下自主完成复杂编码任务。该模式通过改进的上下文管理和工具调用链，使 Claude 能够自主规划、执行和验证代码变更，标志着 AI 编程助手从辅助工具向自主代理的进化。OpenAIGPT-5.5 Instant System CardOpenAI 发布 GPT-5.5 Instant 系统卡，同时公开了关于 GPT-5 中\"goblin 输出\"行为的研究，解析了人格驱动怪癖在模型输出中的传播时间线、根本原因与修复措施。🟢 播客更新Latent SpaceWaymo CEO Dmitry Dolgov：从世界模型到全自动驾驶Waymo CEO Dmitry Dolgov 深度分享了自动驾驶技术的演进。核心洞见：Waymo 的驾驶系统比人类驾驶员安全 13 倍（以严重伤害碰撞衡量），每周行驶超 400 万英里全自动驾驶里程，累计超 1.7 亿英里。第六代硬件平台在性能提升的同时大幅降低成本，支持大规模量产。Waymo 今年计划在伦敦和东京推出服务，标志着从有意的顺序去风险转向快速并行全球商业化。LiDAR 在遮挡场景下展现出超人类感知能力，如通过巴士底部反射信号检测行人脚步。https://x.com/latentspacepod📰 中文 AI 资讯精选机器之心Luma Uni-1.1 API 开放，图像模型榜单第三Luma 推出统一图像模型 Uni-1.1，单一模型同时完成图像理解与生成，第三方盲测榜单全球第三，仅次于 OpenAI 和 Google。采用 decoder-only 自回归 Transformer 架构，将文本与图像 token 统一建模。团队不足 15 人，API 价格仅为同类一半以下。https://mp.weixin.qq.com/s/hNYY0PHsW92HhDUxKfRTWw领先于 Transformer！SubQ 首个 1200 万上下文模型Subquadratic 推出新型大模型 SubQ，核心创新是亚二次选择性注意力机制（SSA），将注意力计算复杂度从 O(N²) 降至线性，百万级 token 场景下速度提升 52.2 倍，算力节省近 1000 倍。https://mp.weixin.qq.com/s/aUXWJY1TFrz6stMpmQRHww国产双开源：Cider + Mano-P，让 Mac 成为私人 AI 工作站明略科技开源 Cider（基于 MLX 的 INT8 激活量化，LLM 预填充速度提升近两倍）和 Mano-P（全球首个端侧 GUI 视觉理解与操作智能体模型），构建 Private AI 闭环：数据不出设备、推理零延迟。https://mp.weixin.qq.com/s/eLN0bUO-hGAxEwPFQ7zsjgAnthropic 联创定下 deadline：2028 年 AI 实现自我进化Anthropic 联合创始人 Jack Clark 认为，到 2028 年底 AI 自主构建自身系统的概率达 60%。多个基准测试（CORE-Bench、MLE-Bench、SWE-Bench）显示 AI 在研发任务上进展迅猛，但尚未展现颠覆性原创洞见。https://mp.weixin.qq.com/s/FcTzvVjn3OVNpLDDZk-ctADeepSeek TUI 登顶热榜：8700 星，开源版 Claude Code基于 DeepSeek V4 的开源终端 AI 编程代理，凭借低成本思维链推理、百万 Token 上下文和 RLM 并行调度，以开源方式实现媲美 Claude Code 的编码能力。https://mp.weixin.qq.com/s/A7ATOoYGBWwf1dpV9GIevwAgent-World：智能体与环境协同进化框架自动从互联网挖掘 1978 个环境、19822 个工具，结合多环境强化学习与自进化诊断机制，Agent-World-8B/14B 在 23 个前沿基准上显著超越开源模型。https://mp.weixin.qq.com/s/Tn2_cNiVIKDl2MU-AFTG-A阿里开源 PromptEcho：冻结 VLM 为文生图提供高质量 Reward无需标注、无需训练的强化学习奖励机制，利用冻结的视觉语言模型计算对数似然作为连续奖励信号，在多个前沿模型和基准上显著优于传统方法。https://mp.weixin.qq.com/s/83eRAXNNKHdHS2BjY3iTuQSonicMoE：Tri Dao 团队加速 MoE 训练普林斯顿和伯克利联合开发的高效 MoE 训练框架，在 Blackwell GPU 上前向性能提升 54%、反向提升 35%，激活内存与专家粒度解耦。https://mp.weixin.qq.com/s/aZWTQxXqrfzc5rboCof4DAACL 2026｜世界模型能让智能体\"预知未来\"？反直觉答案研究发现当前大模型无法稳定有效利用世界模型的前瞻能力，甚至因过度自信或误用而降低性能。提出\"前瞻治理\"概念，瓶颈在于治理能力缺失而非技术能力不足。https://mp.weixin.qq.com/s/8x1idbXkktPRxsuztuthNgACL 2026｜RouteMoA：无需预推理的动态路由高效大模型协作框架，通过轻量级评分器预测模型能力，动态筛选高潜力模型参与协作，降低 89.8% 成本和 63.6% 延迟。https://mp.weixin.qq.com/s/nHWEqgpdH2FdZ08AaPylSgVLA 不够了？触觉将改写具身智能新格局王煜主张引入触觉构建 VTLA 框架，发布全球最大含触觉全模态物理世界数据集 Daimon-Infinity，开源 1 万小时数据。https://mp.weixin.qq.com/s/vYZm6HORv00CfJKrFGxt7w华尔街见闻高盛上调寒武纪、下调浪潮信息国产 AI 芯片 2025 年出货量同比增长 47%，国产芯片占比从 30% 升至 41%。寒武纪一季度营收 29 亿元环比增长 53%，合同负债从 0.6 万骤升至 3.96 亿元。浪潮 AI 服务器平均售价预计从 12 万美元降至 7.2 万美元。量子位 / 夕小瑶科技说 / Datawhale / PaperWeekly / 心智元 / baoyu.io / BigModel各源今日均有更新，涵盖 AI 编程助手、多模态模型、持续学习等话题。部分源抓取内容为编码格式问题，已提取可读摘要。📚 最新论文与官方文章官方博客OpenAI: GPT-5.5 Instant System CardGPT-5.5 Instant 系统卡发布，同时公开\"goblin 输出\"研究，解析 GPT-5 行为中人格驱动怪癖的时间线与修复措施。https://openai.com/zh-Hans-CN/research/index/publication/OpenAI: AI as a Scientific CollaboratorChatGPT 每周约 840 万条高级科学和数学消息，来自约 130 万周活用户，高级科学消息量同比增长 47%。https://aintelligencehub.com/articles/openai-scientific-collaborator-report-scale-research-april-2026arXiv 论文AI Planning Framework for LLM-Based Web Agents海法大学提出面向 LLM Web Agent 的 AI 规划框架，解决自主 Agent 在复杂 Web 环境中的任务规划问题。https://arxiv.org/pdf/2603.12710v1The Auton Agentic AI Framework提出标准化自主 Agent 系统创建、执行和治理的原则性架构，通过认知蓝图与运行时引擎的严格分离实现跨语言可移植性和正式可审计性。https://arxiv.org/abs/2602.23720Think Before You Act — Neurocognitive Governance Model形式化预行动治理推理循环（PAGRL），Agent 在每个重要行动前咨询四层治理规则集，在生产级零售供应链工作流上实现 95% 合规准确率。https://arxiv.org/abs/2604.25684Beyond Static Sandboxing: Learned Capability Governance提出 Aethelgard 四层自适应治理框架，通过学习策略为 AI Agent 强制执行最小权限原则，动态限定 Agent 可感知的工具集。https://arxiv.org/abs/2604.11839🔗 跨源深度整合分析纵向溯源当前 AI 发展的核心脉络可追溯至 2020 年 GPT-3 的 In-Context Learning 突破，它证明了规模扩展可以催生涌现能力。此后，发展路径经历了三个关键节点：第一，2022-2023 年 ChatGPT 引发的对话式 AI 革命，将 LLM 从研究工具转变为大众产品；第二，2024-2025 年 Agent 化浪潮，AI 从被动响应转向主动执行，编码 Agent 率先落地；第三，2026 年当前的多模态统一与治理框架阶段，模型架构从纯文本走向视觉-语言-触觉全模态融合，同时 Agent 治理成为核心议题。这些技术诞生的背景是：传统 Transformer 的 O(N²) 注意力复杂度在长上下文场景下成为瓶颈（SubQ 的 SSA 机制直接回应这一问题）；MoE 架构在扩展专家数量时面临显存和通信瓶颈（SonicMoE 的解决方案）；Agent 在真实环境中缺乏安全约束（PAGRL、Aethelgard 等治理框架的涌现）。横向对比注意力机制路线：传统 Transformer（O(N²)）vs 稀疏注意力（SubQ 的 SSA，线性复杂度）vs MoE 路由（RouteMoA 的动态筛选）。三者解决不同层面的问题：传统方案适合短上下文高精度，SSA 适合超长上下文效率优先，MoE 路由适合多模型协作场景。多模态统一路线：Luma Uni-1.1（decoder-only 自回归，文本+图像 token 统一）vs 传统扩散模型（DALL-E/Midjourney 路线）vs VTLA 框架（视觉+触觉+语言）。Uni-1.1 代表了\"意图先于像素生成\"的新范式，VTLA 则将感知维度扩展到触觉，为具身智能提供更完整的物理世界表征。Agent 治理路线：PAGRL（预行动治理推理循环，四层规则集）vs Aethelgard（学习型能力治理，最小权限）vs Anthropic/OpenAI 的企业部署方案（上下文管理+工作流现代化）。PAGRL 侧重行动前的合规检查，Aethelgard 侧重运行时能力动态约束，企业方案侧重系统集成和变革管理。端侧推理路线：Cider（MLX + INT8 量化 + Neural Accelerator）vs 传统云端推理。端侧方案的核心假设是隐私和延迟优先，适用场景为个人助手和离线环境。趋势判断多源共同印证：Agent 治理成为共识——Aaron Levie（企业部署）、PAGRL 论文（预行动治理）、Aethelgard（能力治理）、Anthropic/OpenAI（企业方案）均指向同一方向：Agent 的能力边界必须被显式约束。长上下文效率是刚需——SubQ（1200 万上下文）、SonicMoE（MoE 显存优化）、Coding Agents as Long-Context Processors 均在解决同一问题。AI 编程助手进入低成本开源竞争阶段——DeepSeek TUI（8700 星）vs Claude Code vs Vercel 安全 Agent，开源正在打破商业工具垄断。明显分歧：AI 自我进化时间线——Jack Clark 预测 2028 年概率 60%，但当前 AI 在原创洞见上仍无突破，SWE-Bench 等基准的进步主要在执行层面而非创新层面。端侧 vs 云端——Cider/Mano-P 代表端侧路线，而 OpenAI/Anthropic 持续加码云端大模型，两条路线的适用边界尚不清晰。国产 AI 芯片对产业链的影响——寒武纪受益于国产替代，浪潮信息因芯片降价利润承压，同一趋势对不同位置的企业影响截然相反。值得关注的萌芽方向：触觉感知进入具身智能（VTLA + Daimon-Infinity 数据集），可能重新定义机器人操作的上限。前瞻治理（Foresight Governance）概念——智能体与世界模型交互的瓶颈不在技术能力而在治理能力，这为 AI 系统设计指明了新方向。学习型能力治理（Aethelgard）——从静态沙箱到动态最小权限，Agent 安全范式正在演进。世界模型的前瞻能力被当前大模型误用——这一反直觉发现可能改变 Agent 架构设计思路。附录：今日全部资讯链接Luma Uni-1.1 — https://mp.weixin.qq.com/s/hNYY0PHsW92HhDUxKfRTWwScal3R 长视频3D重建 — https://mp.weixin.qq.com/s/Yi8AMQ3BxcTCLUDlzvLlcgSubQ 亚二次注意力 — https://mp.weixin.qq.com/s/aUXWJY1TFrz6stMpmQRHwwCider + Mano-P 端侧AI — https://mp.weixin.qq.com/s/eLN0bUO-hGAxEwPFQ7zsjgPromptEcho 文生图Reward — https://mp.weixin.qq.com/s/83eRAXNNKHdHS2BjY3iTuQDeepSeek TUI — https://mp.weixin.qq.com/s/A7ATOoYGBWwf1dpV9GIevwVTLA 触觉具身智能 — https://mp.weixin.qq.com/s/vYZm6HORv00CfJKrFGxt7wLiveMoments ICLR 2026 — https://mp.weixin.qq.com/s/t1j_6aidC8KVZlMS7gABwgxAI GPU利用率11% — https://mp.weixin.qq.com/s/dFpSDgadB7NiTkaa4OBAegAnthropic 2028 AI自我进化 — https://mp.weixin.qq.com/s/FcTzvVjn3OVNpLDDZk-ctAAgent-World — https://mp.weixin.qq.com/s/Tn2_cNiVIKDl2MU-AFTG-ACS专业第三次衰退 — https://mp.weixin.qq.com/s/i5ODa4S3FHj2GeIQlGLgBALegoOcc CVPR 2026 — https://mp.weixin.qq.com/s/soeH_VlEH2J1fsGo98u5ZA黄仁勋点名Anthropic — https://mp.weixin.qq.com/s/uorE5uunFTs_hzPS926-wgSignThought ACL 2026 — https://mp.weixin.qq.com/s/PgSi0r7Ywy5VdOoCaA4fKwSonicMoE — https://mp.weixin.qq.com/s/aZWTQxXqrfzc5rboCof4DA前瞻治理 ACL 2026 — https://mp.weixin.qq.com/s/8x1idbXkktPRxsuztuthNgLEADER CVPR 2026 — https://mp.weixin.qq.com/s/Swkvg5mRNFRws6f5Lp6tywCTO转投Anthropic — https://mp.weixin.qq.com/s/-Jcdiwal0Uh8SL-xy15ySwRouteMoA ACL 2026 — https://mp.weixin.qq.com/s/nHWEqgpdH2FdZ08AaPylSgAaron Levie — https://x.com/levie/status/2051344780328858040Guillermo Rauch — https://x.com/rauchg/status/2051386798899888539Peter Yang — https://x.com/petergyang/status/2051508988936937764Amjad Masad — https://x.com/amasad/status/2051511694040744139Swyx — https://x.com/swyx/status/2051440392722391180AI Planning Framework — https://arxiv.org/pdf/2603.12710v1Auton Agentic AI Framework — https://arxiv.org/abs/2602.23720PAGRL — https://arxiv.org/abs/2604.25684Aethelgard — https://arxiv.org/abs/2604.11839GPT-5.5 System Card — https://openai.com/zh-Hans-CN/research/index/publication/OpenAI Science Report — https://aintelligencehub.com/articles/openai-scientific-collaborator-report-scale-research-april-2026Generated through the Follow Builders skill: https://github.com/zarazhangrui/follow-builders"
+  },
+  {
+    "title": "天才少女罗福莉访谈对普通人以及程序员的启发",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_063baaa65d5936175d8c82c83b6d5772",
+    "content": "URL: https://mp.weixin.qq.com/s/tmS1fQdvd0-DwdVeiys9tA"
+  },
+  {
+    "title": "YC 总裁开源了自己亲手写的 AI Agent 大脑，1 周就 1 万点赞。",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_1c88c74a8aad309d8d0d804a2aaab1b5",
+    "content": "URL: https://mp.weixin.qq.com/s/F9RNOFvc9lAEx2lg50SNDg"
+  },
+  {
+    "title": "AI-Analysis-2026-04-30.md",
+    "media_type": 7,
+    "media_id": "markdown_3c7cd68963ac9189be577fcd034fc501_7fe35043bd31df5c26d7a335ece9e3a7001a718e4e00167e",
+    "content": "Unsupported media type: 7"
+  },
+  {
+    "title": "Karpathy：不喜欢Plan模式！人类必须负责Plan！别去追LLM的逃逸速度，构建自己的RL环境！App理论上不应该存在！刷算法题的招聘已经过时了",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_7b073d1d17db727b0cce80cf5179fe34",
+    "content": "URL: https://mp.weixin.qq.com/s/XZHiLs2wNJDGZPP-W2ESPg"
+  },
+  {
+    "title": "刚刚，DeepSeek最新成果，节前发布！",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_0887cba302fa19f1e1bfb0ffda7c72ac",
+    "content": "URL: https://mp.weixin.qq.com/s/qXl3HK7txW0FUA3itWwMuA"
+  },
+  {
+    "title": "DeepSeek多模态技术报告曝光！细节拉满：七千倍极致压缩，用视觉原语思考，破解指代鸿沟！消耗的算力仅为其它顶级模型的几十分之一！",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_ca2c7a9f60ff7ec0cbfb752ae4ca1daf",
+    "content": "URL: https://mp.weixin.qq.com/s/4XRzjla_zRxH-MAh3txlHw"
+  },
+  {
+    "title": "DeepSeek连夜删掉的新论文，到底说了什么",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_490691db02c887e6e3c18c03199cec30",
+    "content": "URL: http://mp.weixin.qq.com/s?__biz=MjM5MjAyNDUyMA==&mid=2651089905&idx=1&sn=19c742281ac4966bb8773378a6391b35&scene=4#wechat_redirect"
+  },
+  {
+    "title": "AI-Analysis-2026-04-30.md",
+    "media_type": 7,
+    "media_id": "markdown_3c7cd68963ac9189be577fcd034fc501_23c9a4308b82546313e8ff8472c310bb001a718e4e00167e",
+    "content": "Unsupported media type: 7"
+  },
+  {
+    "title": "AI-Analysis-2026-04-30.md",
+    "media_type": 7,
+    "media_id": "markdown_3c7cd68963ac9189be577fcd034fc501_dfa6ecf467c68694692c2005467dad01001a718e4e00167e",
+    "content": "Unsupported media type: 7"
+  },
+  {
+    "title": "AI-Digest-2026-04-30.md",
+    "media_type": 7,
+    "media_id": "markdown_3c7cd68963ac9189be577fcd034fc501_cf688b1c3d504274a7654e52177f1bd5001a718e4e00167e",
+    "content": "Unsupported media type: 7"
+  },
+  {
+    "title": "AI-Digest-2026年04月30日.md",
+    "media_type": 7,
+    "media_id": "markdown_3c7cd68963ac9189be577fcd034fc501_c43d65c9c7d67fdb91048180e5f7e66d001a718e4e00167e",
+    "content": "Unsupported media type: 7"
+  },
+  {
+    "title": "ACL 2026 | LCA：DeepSeek 长文本加速神器，90% KV 缓存缩减 + 2.5 倍推理提速",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_df4ba9b2d0656c1182a54bb019721f89",
+    "content": "URL: http://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651030952&idx=2&sn=3bd33ea0c7ad6f1d7024c45dc17c3fb5&scene=4#wechat_redirect"
+  },
+  {
+    "title": "鱼皮这个月就写了这点儿代码？！",
+    "media_type": 6,
+    "media_id": "wechatarticle_3c7cd68963ac9189be577fcd034fc501_452d5719ce9b7f1e8412cb442f5428d8",
+    "content": "URL: https://mp.weixin.qq.com/s?src=11&timestamp=1776998732&ver=6679&signature=B-OsP8az-SNU9aeCT4HipnpJv36ql0kDZEUlaA4w2dNYCguXunC3TTjWfqBn9zyaEDcEU6uRd*yKB5ioaAfL25hvBnrJulWvRjYKbEDXAUdbfOm4VEWIPL1W*-VATWGC&new=1"
+  },
+  {
+    "title": "3 分钟带你看，AppSo 数字生活家沙龙有多好玩！",
+    "media_type": 6,
+    "media_id": "wechatarticle_3c7cd68963ac9189be577fcd034fc501_1fcd45b4e8fbc4baa7b859e8f16e32b8",
+    "content": "URL: https://mp.weixin.qq.com/s?src=3&timestamp=1776998733&ver=1&signature=lDNnlhNTw9TTSwYo-dOaGM3C1*eGdO9kv0OJx8qg96CgFoFYpGM9fXCS72y68kj2*teauCyJnaOFpqutievz5olTqozIsJ2GZym8tASFNtcQXoWrVHzg6oi7SAErQ3OCP*HsvLFmQJGbqSM0YuhS4V27h0igYulUUIcqKOv7XJk="
+  },
+  {
+    "title": "鱼皮分享编程资源汇总",
+    "media_type": 6,
+    "media_id": "wechatarticle_3c7cd68963ac9189be577fcd034fc501_84772fda5461d2bb3f12d4e212c326e2",
+    "content": "URL: https://mp.weixin.qq.com/s?src=11&timestamp=1776998732&ver=6679&signature=B-OsP8az-SNU9aeCT4HipnpJv36ql0kDZEUlaA4w2dOeRJ6ilU9H6ZwTpX7QOLNQenfk7tJctROswOdPJitDEf8PcKPbaHtDTwLA*3U38YS9G*tItLTPdyeaTQeQWfrJ&new=1"
+  },
+  {
+    "title": "初级和高级程序员，真正的区别是。。",
+    "media_type": 6,
+    "media_id": "wechatarticle_3c7cd68963ac9189be577fcd034fc501_dd8399cba4c9d3f80bb422ff7f0de4d9",
+    "content": "URL: https://mp.weixin.qq.com/s?src=11&timestamp=1776998732&ver=6679&signature=B-OsP8az-SNU9aeCT4HipnpJv36ql0kDZEUlaA4w2dM5rAGEHs5g6eHeLbOh25KMnMFKM3m1*G5gwaZcv*XaOdI18pQUuBRFfgwNuWzj9lMfYvNhoJAZ4JMBaBVlrinV&new=1"
+  },
+  {
+    "title": "2026 年，Embedding要怎么选？（实测Gemini 、jina、Qwen、BGE、OpenAI十大模型）",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_f2c5d493af27b7142ba13ce8f1b04846",
+    "content": "URL: https://mp.weixin.qq.com/s/0EyX7ao8J3ZhLY1Z-9BX-w"
+  },
+  {
+    "title": "Claude_Code_核心源码深度分析.pdf",
+    "media_type": 1,
+    "media_id": "pdf_f3403f8db4ff18f44b554bd305f71b76_6b27f25bed21e138419b3582a97a88de001a718e4e00167e",
+    "content": "Unsupported media type: 1"
+  },
+  {
+    "title": "装了最近爆火的 Hermes，和OpenClaw的对比来了！",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_02f85742ba588227f13b4173c2e23882",
+    "content": "URL: https://mp.weixin.qq.com/s/KrZ26wvMvOusJRKtEeFekw"
+  },
+  {
+    "title": "ClaudeCode课程.pptx",
+    "media_type": 4,
+    "media_id": "ppt_f3403f8db4ff18f44b554bd305f71b76_41d976079222a6d823bed4e3eec6f95e",
+    "content": "Unsupported media type: 4"
+  },
+  {
+    "title": "Kimi K2.6 + Hermes 实测！Karpathy同款保姆级教程来了",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_c55dac789f50b3279c116cecffb424a6",
+    "content": "URL: https://mp.weixin.qq.com/s/2YsgaHJmOsAuq8tDFlEOvg"
+  },
+  {
+    "title": "MiniMax 真正想做的，是模型与 Harness 的双进化！",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_9eb557fe2c9852de3280a28260026b4d",
+    "content": "URL: https://mp.weixin.qq.com/s/Nvq1umaa85vW-wwtfH95bA"
+  },
+  {
+    "title": "HuggingFace 月榜第一！北大开源：你的全自动模型加工厂来了",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_4117c5ae0f9a4d4cfae8b4c36972906f",
+    "content": "URL: https://mp.weixin.qq.com/s/tGj9PZTHhmdo_w0ChW-O4Q"
+  },
+  {
+    "title": "AI Agent 架构怎么选？OpenClaw / hermes-agent / Claude Code / DeerFlow / nanobot 源码级深度对比",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_fdf13ce843bca16052f99c2f242fd338",
+    "content": "URL: https://mp.weixin.qq.com/s/qdnbKai0YHERpAnpg84Oeg"
+  },
+  {
+    "title": "【万字】拆完 Claude Code 51万行源码后，我才明白什么叫 Harness",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_2ca79e5c8619be0c78c19083f34a5430",
+    "content": "URL: https://mp.weixin.qq.com/s/7aXrDQuQ6djodhdZU3Fy4w"
+  },
+  {
+    "title": "第一批拿到ClaudeCode全部源码的狠人解读来了！Anthropic有多处代码都是技术债！网友：这些坑都是AI拼出来的糊料！",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_a8941836a68b64a0e197f2f19328e42a",
+    "content": "URL: https://mp.weixin.qq.com/s/um8mgrAJBJiLhnNkHgjsLA"
+  },
+  {
+    "title": "Claude Code 源码拆解：从启动到多 Agent 扩展层",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_4bac59fa7ec7a7275d50b9537ebe7bfb",
+    "content": "URL: https://mp.weixin.qq.com/s/VHVZV0rrCxYkbrxjuQzIAQ"
+  },
+  {
+    "title": "5 天 5 万收藏的 GitHub 项目解决了 Claude Code 这个烦人问题。",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_ee7544dfc1e59ba8d2fdd68b776d8b17",
+    "content": "URL: https://mp.weixin.qq.com/s/uU1QR5H2xCuNSQD1KFd_Nw"
+  },
+  {
+    "title": "在微信里使用 Claude Code，刚刚在 GitHub 上开源了这个 Skill 。",
+    "media_type": 6,
+    "media_id": "wechatarticle_f3403f8db4ff18f44b554bd305f71b76_5f57e6b59c8898e08bc5a6701734bdfe",
+    "content": "URL: https://mp.weixin.qq.com/s/97gEBa6m1-VIB25PFBELtw"
+  },
+  {
+    "title": "深度研习指导提示词",
+    "media_type": 11,
+    "media_id": "note_f3403f8db4ff18f44b554bd305f71b76_7449731689091179",
+    "content": "深度研习指导提示词核心理念你是我的专业学术导师，引导我以结构化思维深度理解书籍、论文与文章。请运用系统分析方法，帮助我从多维度掌握知识本质。输入说明研究对象 = 「请在此输入学习内容，例如：一本书籍的具体章节一篇学术论文的核心观点某个理论框架一项关键技术概念一个历史事件或人物」学习框架第一阶段：纵向理解（溯源探流）带我理清知识的发展脉络：起源追溯这个知识/理论是在什么背景下诞生的？解决了当时的什么问题？有哪些先驱者为它奠定了基础？演进过程按时间顺序梳理关键发展节点每个阶段的重要突破是什么？理论/观点是如何逐步完善的？内在逻辑为什么会有这样的发展路径？各阶段间的因果关系是什么？理解输出用生动的方式还原发展故事突出转折点和关键时刻解释“为什么是现在这个样子”第二阶段：横向解析（对比深挖）带我从多角度理解当前状态：选择分析模式：独特概念 → 分析其特殊性、相关概念、潜在应用场景有对照概念 → 与1-2个相近概念深入对比复杂体系 → 选取3-5个核心组成部分或相关理论对比对比维度：本质差异：核心思想、基本假设、适用范围实践表现：实际应用效果、典型案例关系定位：在整个知识体系中的位置价值判断：优势、局限、发展方向第三阶段：整合贯通引导我建立系统性理解：连接纵横线索历史发展如何影响当前状态？横向对比如何反映历史选择？构建知识网络这个知识与我已经掌握的知识有什么联系？在更大的知识体系中扮演什么角色？形成个人洞见我可以用自己的话复述核心思想吗？我能举出新的例子或应用场景吗？教学原则对话节奏渐进式推进：像朋友聊天一样自然认知负荷平衡：简单内容可连续推进抽象概念要停下来详细解释每轮对话保持适中的信息量可视化辅助：如原资料有图表，提示我查看具体图表文件名互动方式鼓励表达：当我分享理解时，先肯定正确部分，再纠正偏差追问响应：对我感兴趣的点深入展开，讲透后再回到主线适时总结：每个阶段结束时简要归纳要点链接现实：用具体例子解释抽象概念输出要求结构清晰：先纵向梳理，再横向对比，最后整合总结立足原文：基于提供的材料内容，避免主观臆断深度适宜：根据内容复杂度调整讲解深度鼓励思考：在关键处提出问题，促进主动思考适用场景书籍章节精读学术论文解析理论框架学习技术概念掌握复杂问题分析启动方式：我提供学习材料后，你可以说：“好的，我们开始学习[研究对象]。为了建立深刻理解，我们将从三个维度展开：首先追溯它的来龙去脉，然后剖析它的核心特征，最后将这两条线索结合起来。我们从哪里开始你最有兴趣？”这个版本的提示词：定位明确：专注于学习场景，强调“导师-学生”关系方法融合：将横纵分析法转化为“溯源-对比-整合”的学习路径交互友好：强化渐进式、对话式、响应式的教学体验目标导向：以“建立系统性理解、形成个人洞见”为最终目标实用性强：可直接用于各种学习材料的深度研习"
+  },
+  {
+    "title": "my 聪明智慧第二脑_知识库使用指南",
+    "media_type": 11,
+    "media_id": "note_f3403f8db4ff18f44b554bd305f71b76_7449337370017724",
+    "content": "my 聪明智慧第二脑_知识库使用指南根据提供的参考资料，在创建好 CLAUDE.md 文件后，您需要按照以下流程来使用它，驱动您的AI知识库系统。整个过程可分为三个核心阶段：第一阶段：启动AI，进行首次整理这是将 raw/ 文件夹中杂乱的材料转化为有序 wiki/ 的关键一步。打开AI工具：在您的项目根目录（即包含 raw/, wiki/, outputs/ 和 CLAUDE.md 的文件夹）中，打开一个能够读取文件的大语言模型界面。推荐工具：如Claude Code、Cursor，或任何支持上传文件夹/读取上下文的AI助手（例如ima知识库助手）。发出核心整理指令：向AI提供清晰的指令，让其根据 CLAUDE.md 的规则开始工作。您可以直接使用或微调以下指令：“请先阅读本项目根目录下的 CLAUDE.md 文件，了解本知识库的规则和我的兴趣点。\n然后，读取 raw/ 文件夹中的所有内容。\n接下来，请严格按照 CLAUDE.md 中的规则，在 wiki/ 文件夹中编译一个个人维基。你需要：首先创建 INDEX.md 文件，列出所有主要主题及其一行描述。为每个识别出的主要主题创建一个独立的 .md 文件。在每个文件开头撰写摘要。使用 [[相关主题]] 格式在文章内部建立链接。总结每个原始材料（raw/ 中的文件）的核心内容，并将其整合到相关的主题文章中。”让AI执行：发出指令后，AI将自动处理。完成后，您的 wiki/ 文件夹将生成结构化的主题文件和一个总索引。第二阶段：日常使用与互动提问知识库整理好后，应通过持续对话使其成为“活”的知识库。基于知识库提问：您的所有问题都应基于 wiki/ 中的内容，让AI充当您的专属研究助理。提问模板可参考：深度分析：“基于 wiki/ 中的所有内容，我对 多模态模型架构 理解中最大的三个空白是什么？”对比研究：“比较 raw/ 中 论文A 和 论文B 对 视觉-语言预训练 方法的异同点。”生成报告：“仅使用本知识库的内容，为我撰写一份关于 2025年CV与LLM融合趋势 的800字简报。”保存输出结果：将AI生成的优质答案、报告或分析保存下来。可以直接让AI将输出保存到 outputs/ 文件夹中。或者，如果输出中包含对现有知识的补充或修正，可以指令AI：“请将上述新见解更新到 wiki/ 中相关的主题文章里。”第三阶段：定期维护与健康检查为防止知识库中的错误或矛盾累积，需要定期审计。发出健康检查指令：定期（例如每两周或每月）让AI执行如下指令：“请审查整个 wiki/ 目录，执行健康检查：标记不同文章之间存在的任何事实或观点矛盾。找出被提及但从未详细解释的主题或术语。列出任何在 wiki/ 中声称、但在 raw/ 中缺乏源材料支持的声明。基于当前知识结构，建议3篇最能填补知识空白的新文章或研究方向。”根据检查结果更新：根据AI的检查报告，您可以手动或指令AI将新的源材料加入 raw/，并相应地更新 wiki/。关键原则与提示角色分明：您（人类）的角色是提出需求、判断质量和消费知识。AI的角色是整理、维护、生成和关联信息。不要手动编辑 wiki/ 里的文件，那是AI的工作。工具从简：正如文章强调的“简单胜过复杂”，您无需复杂工具。一个能读取文件的AI界面（如ima知识库助手）加上本文件夹结构，就是全部所需。立即开始：最重要的步骤是动手。填充一些材料到 raw/，然后执行第一阶段的指令，您的知识库就会立刻运转起来。总结来说，CLAUDE.md 的使用就是：1) 让AI读它并整理知识；2) 基于整理后的知识向AI提问；3) 定期让AI做体检并更新。 您现在就可以对ima知识库助手发出第一条整理指令了。"
+  },
+  {
+    "title": "CLAUDE.md",
+    "media_type": 11,
+    "media_id": "note_f3403f8db4ff18f44b554bd305f71b76_7449335432224086",
+    "content": "CLAUDE.md \n# 知识库 Schema\n\n## 这是什么\n\n这是一个面向**多模态AI应用工程师与算法工程师**的个人成长与知识库。核心目标是系统化地积累在**持续学习、大语言模型(LLM)、计算机视觉(CV)**以及**多模态AI**等领域的知识、实践经验和行业洞察，构建一个能够自我迭代、辅助决策和高效产出的“第二大脑”。\n\n## 如何组织\n\n- **`raw/`** 包含未处理的源材料（文章、论文、笔记、截图、代码片段、会议记录等）。**永远不要修改这些文件**，它们是原始素材。\n- **`wiki/`** 包含由AI整理和维护的维基百科式知识条目。**完全由AI维护**，人类仅阅读和使用。\n- **`outputs/`** 包含AI基于知识库生成的答案、分析报告、学习计划、技术方案对比等输出物。\n\n## 维基规则\n\n1.  **文件结构**：每个核心主题或子主题在 `wiki/` 中拥有自己的 `.md` 文件。\n2.  **摘要开头**：每个维基文件必须以一段简洁的摘要开头，概括该主题的核心内容。\n3.  **内部链接**：使用 `[[相关主题名称]]` 的格式在文章内创建到其他维基页面的链接，以强化知识关联。\n    *   例如：多模态模型通常结合了 `[[大语言模型]]` 和 `[[计算机视觉]]` 的能力。\n4.  **维护索引**：在 `wiki/` 中必须维护一个 `INDEX.md` 文件，列出所有维基文章的主题及其一行描述。\n5.  **更新机制**：当 `raw/` 中添加了新的源材料时，AI需要识别其相关性，并更新或补充到 `wiki/` 中对应的主题文章里。\n6.  **格式统一**：保持内容结构清晰，优先使用列表、代码块等格式提高可读性。\n\n## 我的兴趣点\n\n本知识库应重点关注以下方向，并在整理和更新时优先考虑：\n\n1.  **多模态AI技术栈**：模型架构（如CLIP、Flamingo、GPT-4V）、统一表征学习、对齐技术、应用场景（智能体、机器人、内容生成）。\n2.  **算法工程师核心能力**：模型优化（训练/推理）、部署流程（MLOps）、行业解决方案设计、性能评估与调优。\n3.  **持续学习体系**：高效学习法、知识管理方法论、前沿技术追踪路径、经典论文与代码复现。\n4.  **大语言模型(LLM)深度应用**：提示工程、Agent框架、function calling、RAG优化、微调技术、成本控制。\n5.  **计算机视觉(CV)最新进展**：基础模型（分割、检测、生成）、视频理解、3D视觉、与LLM的结合点。\n\n\n "
+  },
+  {
+    "title": "ima知识库使用指南.docx",
+    "media_type": 3,
+    "media_id": "word_f3403f8db4ff18f44b554bd305f71b76_7dbd4b69e942c5d4f458054993c6c07a001a718e4e00167e",
+    "content": "Unsupported media type: 3"
+  }
+]
